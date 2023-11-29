@@ -6,7 +6,7 @@
   <meta name="description" content="Open3DIS">
   <meta name="keywords" content="Open3DIS">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Open3DIS 🛋️</title>
+  <title> Open3DIS </title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -40,7 +40,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Open3DIS 🛋️<br />
+            <h1 class="title is-1 publication-title">Open3DIS <br />
               <p class="title is-3 publication-title">Open-vocabulary 3D Instance Segmentation <br /> with 2D Mask Guidance</p>
             </h1>
             <!-- <h1 class="title is-4" style="color: #5c5c5c;">ICCV 2023</h1> -->
@@ -49,12 +49,12 @@
               <span class="author-block">
                 <a href="https://github.com/PhucNDA/">Phuc Nguyen</a><sup>*1</sup>,</span>
               <span class="author-block">
-                <a href="https://github.com/ngoductuanlhp">Tuan Ngo</a><sup>*2</sup>,
+                <a href="https://ngoductuanlhp.github.io/">Tuan Ngo</a><sup>*2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://people.csail.mit.edu/ganchuang/">Chuang Gan</a><sup>&#8224;2</sup>,</span>
+                <a href="https://people.csail.mit.edu/ganchuang/">Chuang Gan</a><sup>2</sup>,</span>
               <span class="author-block">
-                <a href="https://people.cs.umass.edu/~kalo/">Evangelos Kalogerakis</a><sup>&#8224;2</sup>,
+                <a href="https://people.cs.umass.edu/~kalo/">Evangelos Kalogerakis</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a><sup>1</sup>,
@@ -67,9 +67,9 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block" style="margin-right: 1em;"><sup>1</sup>VinAI Research, Vietnam</span>
-              <!-- <span class="author-block" style="margin-right: 1em;"><sup>2</sup>RWTH Aachen University, Germany</span>
-              <span class="author-block" style="margin-right: 1em;"><sup>1</sup>ETH AI Center, Switzerland</span> -->
+              <span class="author-block" style="margin-right: 1em;"><sup>1</sup>VinAI Research</span>
+              <span class="author-block" style="margin-right: 1em;"><sup>2</sup>UMass Amherst</span>
+              <span class="author-block" style="margin-right: 1em;"><sup>3</sup>MIT-IBM Watson AI Lab</span>
               <span class="author-block" style="margin-right: 1em;"><sup>*</sup>equal contribution</span>
             </div>
 
@@ -97,7 +97,7 @@
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
-                <span>Code</span>
+                <span>Code (coming soon)</span>
 
               </a>
             </span>
@@ -203,6 +203,73 @@
           <br /><br />
           <br /><br />
 
+          <h2 class="title is-3">Quantitative Results</h2>
+          <p class="title is-3 mt-5 has-text-centered"> ScanNet200 </p>
+              <p class="content is-size-6 has-text-justified">
+                OV-3DIS results on <b>ScanNet200</b>. Our proposed method achieves the highest AP, outperforming previous methods in all metrics. The best results are in <b>bold</b> while the second best results are <u>underscored</u>.
+              </p>
+              <p>
+                \[
+                \begin{array}{lcccccc}
+                \hline
+                \textbf{Method} & \textbf{AP} & & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}  & \textbf{AP}$_{\text{head}}$ & \textbf{AP}$_{\text{com}}$ & \textbf{AP}$_{\text{tail}}$  \\
+                \hline
+                OpenScene + DBScan  & 2.8 & 7.8 & 18.6 & 2.7 & 3.1 & 2.6 \\
+                OpenScene + Mask3D  & 11.7 & 15.2 & 17.8 & 13.4 & 11.6 & 9.9 \\
+                SAM3D &  6.1 & 14.2 & 21.3 & 7.0 & 6.2 & 4.6 \\
+                OVIR-3D & 13.0 & 24.9 & \underline{32.3} & 14.4 & 12.7 & 11.7 \\
+                OpenMask3D & 15.4 & 19.9 & 23.1 & 17.1 & 14.1 & 14.9 \\
+                \hline
+                \textbf{Ours} (only 2D) & 18.2 & \underline{26.1} & 31.4 & 18.9 & 16.5 & \underline{19.2} \\
+                \textbf{Ours} (only 3D) & \underline{18.6} & 23.1 & 27.3 & \underline{24.7} & \underline{16.9} & 13.3 \\
+                \textbf{Ours} (2D and 3D) &  \textbf{23.7 }& \textbf{29.4} & \textbf{32.8} & \textbf{27.8} & \textbf{21.2} & \textbf{21.8} \\
+                \hline
+                \end{array}
+                \]
+              </p>
+
+              <p class="title is-3 mt-5 has-text-centered"> Replica </p>
+              <p class="content is-size-6 has-text-justified">
+                OV-3DIS results on <b>Replica</b>.
+              </p>
+              <p>
+                \[
+                \begin{array}{lccc}
+                \hline
+                \textbf{Method} & \textbf{AP} & & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}   \\
+                \hline
+                OpenScene + DBScan  & 10.9 & 15.6 & 17.3 \\ 
+                OpenMask3D & 13.1 & 18.4 & 24.2 \\ 
+                OVIR-3D & 11.1 & 20.5 & 27.5 \\ 
+                \hline
+                \textbf{Ours} & \textbf{18.1} & \textbf{26.7} & \textbf{30.5} \\
+                \hline
+                \end{array}
+                \]
+              </p>
+
+              <p class="title is-3 mt-5 has-text-centered"> S3DIS </p>
+              <p class="content is-size-6 has-text-justified">
+                OV-3DIS results on <b>S3DIS</b>.
+              </p>
+              <p>
+                \[
+                \begin{array}{lcccc}
+                \hline
+                \multirow{ 2}{*}{\textbf{Method}} & \multicolumn{2}{c}{\textbf{B8/N4}} & \multicolumn{2}{c}{\textbf{B6/N6}} \\
+                & \textbf{AP}$^{B}_{50}$ & \textbf{AP}$^N_{50}$ & \textbf{AP}$^{B}_{50}$ & \textbf{AP}$^N_{50}$ \\
+                \midrule
+                LSeg-3D  & 58.3 & 0.3 & 41.1 & 0.5 \\
+                PLA & 59.0 & 8.6 & 46.9 & 9.8 \\
+                Lowis3D & 58.7 & 13.8 & \textbf{51.8} & 15.8 \\
+                \hline
+                \textbf{Ours} & \textbf{60.8} & \textbf{26.3} & 50.0 & \textbf{29.0} \\
+                \hline
+                \end{array}
+                \]
+              </p>
+
+
           <h2 class="title is-3">Qualitative Results</h2>
           <figure class="cd-image-container">
             <img src="assets/2d3d.png" alt="Original Image">
@@ -238,7 +305,15 @@
             </div>
           </div>
 
-
+          <h2 class="title is-4">Open-Vocabulary Exploration</h2>
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <img src="assets/openvocab_explore.png" style="max-width:100%" />
+              <h2 class="subtitle has-text-centered">
+                Open-Vocabulary exploration on ARKitScenes (Left) and Scannet200 (Right)
+              </h2>
+            </div>
+          </div>
 
 
 
