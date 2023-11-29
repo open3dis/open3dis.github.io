@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Human3D">
+  <meta name="keywords" content="Human3D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human3D 🧑‍🤝‍🧑</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .rcorners1 {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px;
+      font-size: 120%;
+      color: #5c5c5c;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Dataset instructions. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Download Instructions</h2>
+          <div class="content has-text-justified">
+
+
+            <p>
+                <b>
+                  Real test dataset with manually refined ground truth labels for human instance and body part segmentation
+                </b>
+                <br /><br />
+  
+                Based on the data from the EgoBody dataset, we created a point-cloud dataset with manually annotated human instance labels and refined body part labels.
+                Our test dataset is currently hosted on the original <a href="https://egobody.ethz.ch">EgoBody download page</a>, and can be downloaded upon accepting the license agreement.
+                On the EgoBody download page, please download the <a href="https://egobody.ethz.ch/data/dataset/human3d_egobody_test_set_release.zip"><code>human3d_egobody_test_set_release.zip</code></a> file to access this dataset, which consists of 
+                304 point clouds along with their ground truth per-point annotations for human instances and body parts. The overall zipped size of the annotated test scenes is less than 1G.
+              </p>
+
+              
+            <p>
+              <b>
+                Real training/validation dataset with pseudo-GT labels for human instance and body part segmentation
+              </b>
+              <br /><br />
+
+              Based on the data from the EgoBody dataset, we created a point-cloud dataset with pseudo GT per-point labels for human instance and body part segmentation tasks. 
+              Our dataset is currently hosted on the original <a href="https://egobody.ethz.ch">EgoBody download page</a>, and can be downloaded upon accepting the license agreement.
+              On the EgoBody download page, please download the <a href="https://egobody.ethz.ch/data/dataset/human3d_egobody_pcd_data.zip"><code>human3d_egobody_pcd_data.zip</code></a> file to access this dataset, which is approximately ~62G, and includes around 20k scenes (point clouds) for training and validation.
+          
+              
+              
+
+            </p>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <b>
+                Synthetic Dataset
+              </b>
+              <br /><br />
+
+              For instructions regarding the synthetic training data generation, please see <a href="https://github.com/human-3d/SyntheticHumanDataset">https://github.com/human-3d/SyntheticHumanDataset</a>.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <b>
+                Loading and Visualizing Data
+              </b>
+              <br /><br />
+                We provide an example dataloader for loading and visualizing the point clouds in our dataset. The example dataloader can be found at 
+                <a href="https://github.com/human-3d/SyntheticHumanDataset/blob/main/example_dataloader.py">https://github.com/human-3d/SyntheticHumanDataset/blob/main/example_dataloader.py</a>. 
+                Please see the <a href="https://github.com/human-3d/SyntheticHumanDataset/blob/main/README.md">README</a> for further details about how to set up the repo, and how to use the dataloader. 
+              
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+      <!--/ Dataset instructions. -->
+    </div>
+    </div>
+    
+      <!--/ Concurrent Work. -->
+
+
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</html>

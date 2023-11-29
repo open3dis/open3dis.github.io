@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Open3DIS">
+  <meta name="keywords" content="Open3DIS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Open3DIS 🛋️</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .rcorners1 {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px;
+      font-size: 120%;
+      color: #5c5c5c;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Open3DIS 🛋️<br />
+              <p class="title is-3 publication-title">Open-vocabulary 3D Instance Segmentation <br /> with 2D Mask Guidance</p>
+            </h1>
+            <!-- <h1 class="title is-4" style="color: #5c5c5c;">ICCV 2023</h1> -->
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/PhucNDA/">Phuc Nguyen</a><sup>*1</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/ngoductuanlhp">Tuan Ngo</a><sup>*2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.csail.mit.edu/ganchuang/">Chuang Gan</a><sup>&#8224;2</sup>,</span>
+              <span class="author-block">
+                <a href="https://people.cs.umass.edu/~kalo/">Evangelos Kalogerakis</a><sup>&#8224;2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.khoinguyen.org/">Khoi Nguyen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/cuongpham/home">Cuong Pham</a><sup>1</sup>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="margin-right: 1em;"><sup>1</sup>VinAI Research, Vietnam</span>
+              <!-- <span class="author-block" style="margin-right: 1em;"><sup>2</sup>RWTH Aachen University, Germany</span>
+              <span class="author-block" style="margin-right: 1em;"><sup>1</sup>ETH AI Center, Switzerland</span> -->
+              <span class="author-block" style="margin-right: 1em;"><sup>*</sup>equal contribution</span>
+            </div>
+
+            <!-- Link-->
+            <span class="link-block">
+              <a href="" class="external-link button is-normal is-rounded is-dark" disabled>
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="" class="external-link button is-normal is-rounded is-dark" disabled>
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="" class="external-link button is-normal is-rounded is-dark" disabled>
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+
+              </a>
+            </span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="assets/teaser.png" style="max-width:100%" />
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>
+                TL;DR: We propose Open3DIS addressing 3D Instance Segmentation with Open-Vocabulary queries.
+              </b>
+              <br /><br />
+
+              We introduce <b>Open3DIS </b>, a novel solution designed to tackle the problem of Open-Vocabulary Instance Segmentation within 3D scenes. Objects within 3D environments exhibit diverse shapes, scales, and colors, making precise instance-level identification a challenging task. Recent advancements in Open-Vocabulary scene understanding have made significant strides in this area by employing class-agnostic 3D instance proposal networks for object localization and learning queryable features for each 3D mask. While these methods produce high-quality instance proposals, they struggle with identifying small-scale and geometrically ambiguous objects. The key idea of our method is a new module that aggregates 2D instance masks across frames and maps them to geometrically coherent point cloud regions as high-quality object proposals addressing the above limitations. These are then combined with 3D class-agnostic instance proposals to include a wide range of objects in the real world. 
+              To validate our approach, we conducted experiments on three prominent datasets, including Scannet200, S3DIS, and Replica, demonstrating significant performance gains in segmenting objects with diverse categories over the state-of-the-art approaches.             </p>
+                
+          </div>
+          <br /><br />
+          <figure class="cd-image-container">
+            <img src="assets/3dproposal.png" alt="Original Image">
+            <span class="cd-image-label" data-type="original">
+            </span>
+
+            <div class="cd-resize-img" style="border-right: 2px dotted rgb(94, 94, 94);">
+              <!-- the resizable image on top -->
+              <img src="assets/pcloud.png" alt="Modified Image">
+              <span class="cd-image-label" data-type="modified">
+              </span>
+            </div>
+
+            <span class="cd-handle"></span>
+          </figure> <!-- cd-image-container -->
+        </div>
+      </div>
+
+      <!--Method-->
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <img src="assets/method.png" style="max-width:100%" />
+                <h2 class="subtitle has-text-centered">
+                </h2>
+              </div>
+            </div>
+            <div class="content has-text-justified">
+            <p>
+              A pre-trained class-agnostic 3D Instance Segmenter proposes initial 3D objects, while a 2D Instance Segmenter generates masks for video frames. Our 2D-guide-3D Instance Proposal Module combines superpoints and 2D instance masks to enhance 3D proposals, integrating them with the initial 3D proposals. Finally, the Pointwise Feature Extraction module correlates instance-aware point cloud CLIP features from multiview images with text embeddings to generate the ultimate instance masks.  
+            </p>
+          </div>
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <img src="assets/2d-3d-maskguide.png" style="max-width:100%" />
+                <h2 class="subtitle has-text-centered">
+                </h2>
+              </div>
+            </div>
+
+            <div class="content has-text-justified">
+            <p>
+              (Top) The 2D-G-3DIP module utilizes 2D per-frame instance masks to generate per-frame 3D proposals by leveraging 3D superpoints. (Bottom) Our proposed hierarchical merging. These proposals are considered point cloud regions and undergo a hierarchical merging process across multiple views, resulting in the final Augmented 3D proposals
+            </p>                    
+            </div>
+          </div>
+        </div>
+
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <p id="explanatory-video"></p>
+          <h2 class="title is-3">Demo Instance-Aware Point Cloud Features</h2>
+          <video controls poster="assets/starter_gui.png">
+            <source src="assets/Open3DIS_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+          <br /><br />
+          <br /><br />
+
+          <h2 class="title is-3">Qualitative Results</h2>
+          <figure class="cd-image-container">
+            <img src="assets/2d3d.png" alt="Original Image">
+            <span class="cd-image-label" data-type="original">
+            </span>
+
+            <div class="cd-resize-img" style="border-right: 2px dotted rgb(94, 94, 94);">
+              <!-- the resizable image on top -->
+              <img src="assets/ovir3d.png" alt="Modified Image">
+              <span class="cd-image-label" data-type="modified">
+              </span>
+            </div>
+
+            <span class="cd-handle"></span>
+          </figure>
+          <br /><br />
+          <h2 class="title is-4">Single Image Lifting</h2>
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <img src="assets/singleview.png" style="max-width:100%" />
+              <h2 class="subtitle has-text-centered">
+                3D instance proposals produced from a single view
+              </h2>
+            </div>
+          </div>
+          <h2 class="title is-4">Scannet200 Benchmark</h2>
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <img src="assets/scannet200.png" style="max-width:100%" />
+              <h2 class="subtitle has-text-centered">
+                3D instance proposals results on Scannet200. Orange Circle indicates the focus region
+              </h2>
+            </div>
+          </div>
+
+
+
+
+
+          <h2 class="title is-3">Related Work</h2>
+          <div class="content has-text-justified">
+          <a href="https://github.com/shiyoung77/OVIR-3D">OVIR-3D: Open-Vocabulary 3D Instance Retrieval Without Training on 3D Data</a>
+          <br /><br />
+          <a href="https://openmask3d.github.io/#">OpenMask3D: Open-Vocabulary 3D Instance Segmentation</a>
+        </div>
+
+          
+
+        
+
+
+          
+          <!-- <h2 class="title is-3">Publication</h2>
+          <div class="content has-text-justified">
+          <a href="https://arxiv.org/abs/2212.00786"><img src="assets/paper_preview.jpg" style="max-width:100%" /></a> -->
+          <!-- </div>
+          <p id="bibtex"></p>
+          <h2 class="title is-3">BibTeX</h2>
+  
+          <pre><code>
+@inproceedings{human3d,
+    title     = {{3D Segmentation of Humans in Point Clouds with Synthetic Data}},
+    author    = {Takmaz, Ay\c{c}a and Schult, Jonas and Kaftan, Irem and Ak\c{c}ay, Mertcan 
+                  and Leibe, Bastian and Sumner, Robert and Engelmann, Francis and Tang, Siyu},
+    booktitle = {{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}},
+    year      = {2023}
+  }
+            </code></pre>
+        </div>
+      </div>
+      / Concurrent Work. -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                  It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+                  We would like to thank Utkarsh Sinha and Keunhong Park.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</html>
