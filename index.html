@@ -215,23 +215,23 @@
                 \[
                 \begin{array}{lcccccc}
                 \hline
-                \textbf{Method} & \textbf{AP} & & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}  & \textbf{AP}$_{\text{head}}$ & \textbf{AP}$_{\text{com}}$ & \textbf{AP}$_{\text{tail}}$  \\
+                \textbf{Method} & \textbf{AP} & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}  & \textbf{AP}$_{head}$ & \textbf{AP}$_{com}$ & \textbf{AP}$_{tail}$  \\
                 \hline
-                OpenScene + DBScan  & 2.8 & 7.8 & 18.6 & 2.7 & 3.1 & 2.6 \\
-                OpenScene + Mask3D  & 11.7 & 15.2 & 17.8 & 13.4 & 11.6 & 9.9 \\
-                SAM3D &  6.1 & 14.2 & 21.3 & 7.0 & 6.2 & 4.6 \\
-                OVIR-3D & 13.0 & 24.9 & \underline{32.3} & 14.4 & 12.7 & 11.7 \\
-                OpenMask3D & 15.4 & 19.9 & 23.1 & 17.1 & 14.1 & 14.9 \\
+                \text{OpenScene + DBScan}  & 2.8 & 7.8 & 18.6 & 2.7 & 3.1 & 2.6 \\
+                \text{OpenScene + Mask3D}  & 11.7 & 15.2 & 17.8 & 13.4 & 11.6 & 9.9 \\
+                \text{SAM3D} &  6.1 & 14.2 & 21.3 & 7.0 & 6.2 & 4.6 \\
+                \text{OVIR-3D} & 13.0 & 24.9 & \underline{32.3} & 14.4 & 12.7 & 11.7 \\
+                \text{OpenMask3D} & 15.4 & 19.9 & 23.1 & 17.1 & 14.1 & 14.9 \\
                 \hline
-                \textbf{Ours} (only 2D) & 18.2 & \underline{26.1} & 31.4 & 18.9 & 16.5 & \underline{19.2} \\
-                \textbf{Ours} (only 3D) & \underline{18.6} & 23.1 & 27.3 & \underline{24.7} & \underline{16.9} & 13.3 \\
-                \textbf{Ours} (2D and 3D) &  \textbf{23.7 }& \textbf{29.4} & \textbf{32.8} & \textbf{27.8} & \textbf{21.2} & \textbf{21.8} \\
+                \textbf{Ours} \text{ (only 2D)} & 18.2 & \underline{26.1} & 31.4 & 18.9 & 16.5 & \underline{19.2} \\
+                \textbf{Ours} \text{ (only 3D)} & \underline{18.6} & 23.1 & 27.3 & \underline{24.7} & \underline{16.9} & 13.3 \\
+                \textbf{Ours} \text{ (2D and 3D)} &  \textbf{23.7 }& \textbf{29.4} & \textbf{32.8} & \textbf{27.8} & \textbf{21.2} & \textbf{21.8} \\
                 \hline
                 \end{array}
                 \]
               </p>
 
-              <p class="title is-3 mt-5 has-text-centered"> Replica </p>
+              <!-- <p class="title is-3 mt-5 has-text-centered"> Replica </p>
               <p class="content is-size-6 has-text-justified">
                 OV-3DIS results on <b>Replica</b>.
               </p>
@@ -239,11 +239,11 @@
                 \[
                 \begin{array}{lccc}
                 \hline
-                \textbf{Method} & \textbf{AP} & & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}   \\
+                \textbf{Method} & \textbf{AP} & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}   \\
                 \hline
-                OpenScene + DBScan  & 10.9 & 15.6 & 17.3 \\ 
-                OpenMask3D & 13.1 & 18.4 & 24.2 \\ 
-                OVIR-3D & 11.1 & 20.5 & 27.5 \\ 
+                \text{OpenScene + DBScan}  & 10.9 & 15.6 & 17.3 \\ 
+                \text{OpenMask3D} & 13.1 & 18.4 & 24.2 \\ 
+                \text{OVIR-3D} & 11.1 & 20.5 & 27.5 \\ 
                 \hline
                 \textbf{Ours} & \textbf{18.1} & \textbf{26.7} & \textbf{30.5} \\
                 \hline
@@ -259,18 +259,18 @@
                 \[
                 \begin{array}{lcccc}
                 \hline
-                \multirow{ 2}{*}{\textbf{Method}} & \multicolumn{2}{c}{\textbf{B8/N4}} & \multicolumn{2}{c}{\textbf{B6/N6}} \\
+                \textbf{Method} & \multicolumn{2}{c}{\textbf{B8/N4}} & \multicolumn{2}{c}{\textbf{B6/N6}} \\
                 & \textbf{AP}$^{B}_{50}$ & \textbf{AP}$^N_{50}$ & \textbf{AP}$^{B}_{50}$ & \textbf{AP}$^N_{50}$ \\
                 \midrule
-                LSeg-3D  & 58.3 & 0.3 & 41.1 & 0.5 \\
-                PLA & 59.0 & 8.6 & 46.9 & 9.8 \\
-                Lowis3D & 58.7 & 13.8 & \textbf{51.8} & 15.8 \\
+                \text{LSeg-3D}  & 58.3 & 0.3 & 41.1 & 0.5 \\
+                \text{PLA} & 59.0 & 8.6 & 46.9 & 9.8 \\
+                \text{Lowis3D} & 58.7 & 13.8 & \textbf{51.8} & 15.8 \\
                 \hline
                 \textbf{Ours} & \textbf{60.8} & \textbf{26.3} & 50.0 & \textbf{29.0} \\
                 \hline
                 \end{array}
                 \]
-              </p>
+              </p> -->
 
 
           <h2 class="title is-3">Qualitative Results</h2>
