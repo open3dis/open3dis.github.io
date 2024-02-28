@@ -236,13 +236,37 @@
                 \hline
                 \text{OpenScene + DBScan}  & 2.8 & 7.8 & 18.6 & 2.7 & 3.1 & 2.6 \\
                 \text{OpenScene + Mask3D}  & 11.7 & 15.2 & 17.8 & 13.4 & 11.6 & 9.9 \\
-                \text{SAM3D} &  6.1 & 14.2 & 21.3 & 7.0 & 6.2 & 4.6 \\
-                \text{OVIR-3D} & 13.0 & 24.9 & \underline{32.3} & 14.4 & 12.7 & 11.7 \\
+                \text{SAM3D (SAM)} &  6.1 & 14.2 & 21.3 & 7.0 & 6.2 & 4.6 \\
+                \text{OVIR-3D (G-SAM)} & 13.0 & 24.9 & \underline{32.3} & 14.4 & 12.7 & 11.7 \\
                 \text{OpenMask3D} & 15.4 & 19.9 & 23.1 & 17.1 & 14.1 & 14.9 \\
                 \hline
                 \textbf{Ours} \text{ (only 2D)} & 18.2 & \underline{26.1} & 31.4 & 18.9 & 16.5 & \underline{19.2} \\
                 \textbf{Ours} \text{ (only 3D)} & \underline{18.6} & 23.1 & 27.3 & \underline{24.7} & \underline{16.9} & 13.3 \\
                 \textbf{Ours} \text{ (2D and 3D)} &  \textbf{23.7 }& \textbf{29.4} & \textbf{32.8} & \textbf{27.8} & \textbf{21.2} & \textbf{21.8} \\
+                \hline
+                \end{array}
+                \]
+              </p>
+
+              <p class="content is-size-6 has-text-justified">
+                Class-agnostic 3DIS evalutaion results on <b>ScanNet200</b>! (updated on 2024, Feb. 29th) [not in arxiv Dec. 17th] *: unofficial.
+              </p>
+              <p>
+                \[
+                \begin{array}{lccc}
+                \hline
+                \textbf{Method} & \textbf{AP} & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}  & \textbf{AR} & \textbf{AR$_{50}$} & \textbf{AR$_{25}$}  \\
+                \hline
+                \text{Superpoint} & 5.0 & 12.7 & 38.9 \\
+                \text{DBSCAN} & 1.6 & 5.5 & 32.1 \\
+                \text{SAM3D}  & 20.2 & 54.0 & 30.3 \\
+                \text{OVIR-3D* (Detic)} & 14.4 & 27.5 & 38.8 \\
+                \text{Mask Clustering (CropFormer)} & 17.4 & 33.3 & 46.7 \\
+                \text{SAI3D (SAM)}  & 30.8 & 50.5 & 70.6 \\
+                \hline
+                \textbf{Ours} \text{ (G-SAM)} & 29.7 & 45.2	& 56.8 &	49.0 & 70.0	 & 83.2 \\
+                \textbf{Ours} \text{ (3D+G-SAM)} & 34.6 & 43.1 & 48.5 & 66.2 & 81.6 & 91.4 \\
+                \textbf{Ours} \text{ (3D+SAM)} & 41.5 & 51.6 & 56.3 & 74.8 & 90.9 & 97.8 \\
                 \hline
                 \end{array}
                 \]
