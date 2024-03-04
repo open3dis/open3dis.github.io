@@ -272,6 +272,25 @@
                 \]
               </p>
 
+          <p class="title is-3 mt-5 has-text-centered"> ScanNet++ </p>
+            <p class="content is-size-6 has-text-justified">
+              Class-agnostic 3DIS evalutaion results on <b>ScanNet++</b>. Quick run Open3DIS with 100 frames per scene! (updated on 2024, Mar. 3rd) [not in arxiv Dec. 17th].            </p>
+            <p>
+              \[
+              \begin{array}{lccc}
+              \hline
+              \textbf{Method} & \textbf{AP} & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}  & \textbf{AR} & \textbf{AR$_{50}$} & \textbf{AR$_{25}$}  & \textbf{NOTE} \\
+              \hline
+              \text{SAM3D} & 7.2 & 14.2 & 29.4 &\\
+              \text{SAM-guided Graph Cut} & 12.9 & 25.3 & 43.6 &\\
+              \text{Segment3D} & 12.0 & 22.7 & 37.8 &\\
+              \text{SAI3D (SAM)}  & 17.1 & 31.1 & 49.5 &\\
+              \hline
+              \textbf{Ours} \text{(SAM)} & 18.5 & 33.5	& 44.3 &	35.6 & 63.7	 & 82.7 &  \text{100 frames per scene}&\\
+              \hline
+              \end{array}
+              \]
+            </p>
               <!-- <p class="title is-3 mt-5 has-text-centered"> Replica </p>
               <p class="content is-size-6 has-text-justified">
                 OV-3DIS results on <b>Replica</b>.
