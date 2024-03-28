@@ -252,7 +252,7 @@
               </p>
 
               <p class="content is-size-6 has-text-justified">
-                Class-agnostic 3DIS evalutaion results on <b>ScanNet200</b>! (updated on 2024, Mar. 19th) [not in arxiv Dec. 17th] *: unofficial.
+                Class-agnostic 3DIS evalutaion results on <b>ScanNet200</b>! (updated on 2024, Mar. 25th) [not in arxiv Dec. 17th] *: unofficial.
               </p>
               <p>
                 \[
@@ -268,9 +268,10 @@
                 \text{Mask Clustering (CropFormer)} & 17.4 & 33.3 & 46.7 \\
                 \text{SAI3D (SAM)}  & 30.8 & 50.5 & 70.6 \\
                 \hline
-                \textbf{Ours} \text{ (G-SAM)} & 29.7 & 45.2	& 56.8 &	49.0 & 70.0	 & 83.2 \\
-                \textbf{Ours} \text{ (3D+G-SAM)} & 34.6 & 43.1 & 48.5 & 66.2 & 81.6 & 91.4 \\
-                \textbf{Ours} \text{ (3D+SAM)} & 41.5 & 51.6 & 56.3 & 74.8 & 90.9 & 97.8 \\
+                \textbf{Ours} \text{ (G-SAM)} & 29.7 & 45.2	& 56.8 & 49.0 & 70.0 & 83.2 \\
+                \textbf{Ours} \text{ (3D)} & 40.2 & 50.0 & 54.6 & 66.8 & 80.4 & 87.4 \\
+                \textbf{Ours} \text{ (3D + G-SAM)} & 34.6 & 43.1 & 48.5 & 66.2 & 81.6 & 91.4 \\
+                \textbf{Ours} \text{ (3D + SAM)} & 41.5 & 51.6 & 56.3 & 74.8 & 90.9 & 97.8 \\
                 \hline
                 \end{array}
                 \]
@@ -278,12 +279,14 @@
 
           <p class="title is-3 mt-5 has-text-centered"> ScanNet++ </p>
             <p class="content is-size-6 has-text-justified">
-              Class-agnostic 3DIS evalutaion results on <b>ScanNet++</b>. Quick run Open3DIS with 100 frames per scene! (updated on 2024, Mar. 3rd) [not in arxiv Dec. 17th].            </p>
+              Class-agnostic 3DIS evalutaion results on <b>ScanNet++</b>. (updated on 2024, Mar. 28th) [not in arxiv Dec. 17th].            </p>
             <p>
               \[
               \begin{array}{lccc}
               \hline
               \textbf{Method} & \textbf{AP} & \textbf{AP$_{50}$} & \textbf{AP$_{25}$}  & \textbf{AR} & \textbf{AR$_{50}$} & \textbf{AR$_{25}$}  & \textbf{NOTE} \\
+              \hline
+              \text{ISBNet (3D)} & 6.2 & 10.1  &	16.2  & 10.9 & 16.9 & 25.2 & \text{pretrained Scannet200}&\\
               \hline
               \text{SAM3D} & 7.2 & 14.2 & 29.4 &\\
               \text{SAM-guided Graph Cut} & 12.9 & 25.3 & 43.6 &\\
